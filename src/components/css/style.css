@@ -1,0 +1,75 @@
+form {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 20vw;
+}
+form h1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+form label {
+  text-align: start;
+  width: 98%;
+  margin: 20px 0 5px 0;
+}
+form input {
+  width: 100%;
+  outline-color: #0089ff;
+}
+form input::-moz-placeholder {
+  color: rgba(128, 128, 128, 0.314);
+  letter-spacing: 0.1px;
+}
+form input:-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.314);
+  letter-spacing: 0.1px;
+}
+form input::placeholder {
+  color: rgba(128, 128, 128, 0.314);
+  letter-spacing: 0.1px;
+}
+form .input-text {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+form .btn-submit {
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+  margin-top: 5px;
+}
+form .btn-submit:hover {
+  transition: 1s;
+  background: #0089ff;
+  color: white;
+  border: 1px solid white;
+}
+form .btn-submit:active {
+  transition: 0.1s;
+  background: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.fields {
+  width: 40%;
+  height: 100%;
+  padding: 40px 60px;
+  background: #fff;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+p {
+  color: black;
+}/*# sourceMappingURL=style.css.map */
