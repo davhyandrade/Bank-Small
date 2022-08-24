@@ -1,12 +1,10 @@
 import './css/style.css'
 
-export default (props) => {
-    console.log(props.usuario);
-
+export default ({ usuario }) => {
     return(
         <>
             <div className="fields">
-                <p>Eae {props.usuario}, dboa?</p>
+                <p>Eae {usuario}, dboa?</p>
             </div>
         </>
     )
