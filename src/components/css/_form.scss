@@ -1,5 +1,9 @@
 @import 'colors';
 
+.field-login {
+    height: 390px;
+}
+
 form {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -8,45 +12,66 @@ form {
     flex-direction: column;
     width: 20vw;
     
-    
     h1 {
         font-size: 30px;
-        margin-bottom: 5px;
+        margin-bottom: 30px;
+        color: $thirdColor;
     }
 
-    label {
-        text-align: start;
-        width: 98%;
-        margin: 20px 0 5px 0;
-    }
-
-    input {
+    div {
         width: 100%;
-        outline-color: $primaryColorField;
 
-        &::placeholder {
-            color: rgba(128, 128, 128, 0.314);
-            letter-spacing: 0.1px;
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 100%;
+            background: #80808045;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
-    }
 
-    .input-text {
-        padding: 5px;
-        border-radius: 5px;
-        border: 1px solid gray;
+        label {
+            text-align: start;
+            width: 98%;
+            margin: 20px 0 10px 0;
+            color: #5e5e5e;
+            font-size: 14px;
+        }
+    
+        input {
+            width: 100%;
+            outline-color: $thirdColor;
+    
+            &::placeholder {
+                color: rgba(128, 128, 128, 0.314);
+                letter-spacing: 0.1px;
+            }
+        }
+    
+        .input-text {
+            display: block;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+    
     }
 
     .btn-submit {
         padding: 10px 30px;
         width: 100%;
         border-radius: 5px;
-        border: 1px solid gray;
+        border: 1px solid rgba(128, 128, 128, 0.2705882353);
         cursor: pointer;
         margin-top: 5px;
+        font-weight: bold;
+        color: $thirdColor;
     
         &:hover {
             transition: 1s;
-            background: $primaryColorField;
+            background: $thirdColor;
             color: white;
             border: 1px solid white;        
         }

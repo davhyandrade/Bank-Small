@@ -1,0 +1,98 @@
+@import 'colors';
+
+.field-option {
+    background: $secondaryColor;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    width: 65%;
+    height: 270px;
+
+    .field-position-option {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: Arial, Helvetica, sans-serif;
+    
+        hr {
+            border: none;
+            height: 220px;
+            width: 1.5px;
+            background: linear-gradient(45deg, transparent, #444444, transparent);
+        }
+
+        div {
+            button {
+                padding: 8px 30px;
+                border-radius: 7px;
+                cursor: pointer;
+                font-weight: bold;
+                letter-spacing: 1px;
+                border: 2px solid white;
+                color: $secondaryColor;
+
+                &:hover {
+                    transition: 1s;
+                    color: white;
+                    background: rgba(255, 255, 255, 0.296);
+                }
+
+                &:active {
+                    transition: 0.1s;
+                    color: $secondaryColor;
+                    background: $thirdColor;
+                    border: 2px solid $thirdColor;
+                }
+            }
+        }
+    
+        div:nth-child(1) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 55%;
+
+            img {
+                width: 250px;
+            }
+
+            div {
+                width: 40%;
+
+                p {
+                    color: rgba(255, 255, 255, 0.529);
+                    text-align: end;
+                    margin-bottom: 25px;
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+
+        & > div:nth-child(3) {
+            width: 35%;
+
+            h1 {
+                color: white;
+                font-size: 25px;
+    
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 5px;
+                    width: 90px;
+                    margin-bottom: 20px;
+                    border-radius: 10px;
+                    background: white;
+                }
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.529);
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

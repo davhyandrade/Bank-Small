@@ -1,3 +1,7 @@
+.field-login {
+  height: 390px;
+}
+
 form {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -8,45 +12,64 @@ form {
 }
 form h1 {
   font-size: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
+  color: #001a59;
 }
-form label {
+form div {
+  width: 100%;
+}
+form div::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: rgba(128, 128, 128, 0.2705882353);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+form div label {
   text-align: start;
   width: 98%;
-  margin: 20px 0 5px 0;
+  margin: 20px 0 10px 0;
+  color: #5e5e5e;
+  font-size: 14px;
 }
-form input {
+form div input {
   width: 100%;
-  outline-color: #0089ff;
+  outline-color: #001a59;
 }
-form input::-moz-placeholder {
+form div input::-moz-placeholder {
   color: rgba(128, 128, 128, 0.314);
   letter-spacing: 0.1px;
 }
-form input:-ms-input-placeholder {
+form div input:-ms-input-placeholder {
   color: rgba(128, 128, 128, 0.314);
   letter-spacing: 0.1px;
 }
-form input::placeholder {
+form div input::placeholder {
   color: rgba(128, 128, 128, 0.314);
   letter-spacing: 0.1px;
 }
-form .input-text {
+form div .input-text {
+  display: block;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid gray;
+  border: none;
+  outline: none;
 }
 form .btn-submit {
   padding: 10px 30px;
   width: 100%;
   border-radius: 5px;
-  border: 1px solid gray;
+  border: 1px solid rgba(128, 128, 128, 0.2705882353);
   cursor: pointer;
   margin-top: 5px;
+  font-weight: bold;
+  color: #001a59;
 }
 form .btn-submit:hover {
   transition: 1s;
-  background: #0089ff;
+  background: #001a59;
   color: white;
   border: 1px solid white;
 }
@@ -59,10 +82,8 @@ form .btn-submit:active {
 
 .fields {
   width: 40%;
-  height: 100%;
   padding: 40px 60px;
   background: #fff;
-  border: 1px solid gray;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -70,6 +91,151 @@ form .btn-submit:active {
   margin-top: 70px;
 }
 
-p {
-  color: black;
+.field-landing-page {
+  height: 470px;
+  width: 65%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+}
+.field-landing-page p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #001a59;
+  width: 95%;
+  font-weight: bold;
+  font-size: 60px;
+  margin-top: 20px;
+}
+.field-landing-page p span {
+  text-transform: uppercase;
+}
+.field-landing-page img {
+  position: absolute;
+  right: 10px;
+  width: 500px;
+  bottom: 0;
+}
+.field-landing-page #vetor-codigos {
+  width: 630px;
+  opacity: 70%;
+}
+
+.field-option {
+  background: #2d2d2d;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  width: 65%;
+  height: 270px;
+}
+.field-option .field-position-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.field-option .field-position-option hr {
+  border: none;
+  height: 220px;
+  width: 1.5px;
+  background: linear-gradient(45deg, transparent, #444444, transparent);
+}
+.field-option .field-position-option div button {
+  padding: 8px 30px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 2px solid white;
+  color: #2d2d2d;
+}
+.field-option .field-position-option div button:hover {
+  transition: 1s;
+  color: white;
+  background: rgba(255, 255, 255, 0.296);
+}
+.field-option .field-position-option div button:active {
+  transition: 0.1s;
+  color: #2d2d2d;
+  background: #001a59;
+  border: 2px solid #001a59;
+}
+.field-option .field-position-option div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 55%;
+}
+.field-option .field-position-option div:nth-child(1) img {
+  width: 250px;
+}
+.field-option .field-position-option div:nth-child(1) div {
+  width: 40%;
+}
+.field-option .field-position-option div:nth-child(1) div p {
+  color: rgba(255, 255, 255, 0.529);
+  text-align: end;
+  margin-bottom: 25px;
+}
+.field-option .field-position-option div:nth-child(1) div button {
+  width: 100%;
+}
+.field-option .field-position-option > div:nth-child(3) {
+  width: 35%;
+}
+.field-option .field-position-option > div:nth-child(3) h1 {
+  color: white;
+  font-size: 25px;
+}
+.field-option .field-position-option > div:nth-child(3) h1::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 90px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: white;
+}
+.field-option .field-position-option > div:nth-child(3) p {
+  color: rgba(255, 255, 255, 0.529);
+  margin-bottom: 25px;
+}
+
+.field-info {
+  width: 60%;
+}
+.field-info .form-info {
+  width: 85%;
+}
+.field-info .form-info div {
+  margin-bottom: 15px;
+}
+.field-info .form-info div label {
+  font-size: 13px;
+}
+.field-info .form-info h3 {
+  text-align: start;
+  width: 100%;
+  color: #001a59;
+  font-weight: normal;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+.field-info .form-info h3::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(45deg, #001a59, transparent);
+  margin-bottom: 30px;
+}
+.field-info .form-info .sexo::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 15%;
+  background: rgba(128, 128, 128, 0.2705882353);
+  border-radius: 10px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */
