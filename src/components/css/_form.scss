@@ -1,7 +1,15 @@
 @import 'colors';
 
 .field-login {
-    height: 390px;
+    height: 570px;
+    width: 31%;
+    padding: 40px 60px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
 }
 
 form {
@@ -10,12 +18,18 @@ form {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 20vw;
+    width: 100%;
     
     h1 {
         font-size: 30px;
         margin-bottom: 30px;
         color: $thirdColor;
+    }
+
+    p {
+        margin-bottom: 50px;
+        letter-spacing: 1px;
+        color: #80808080;
     }
 
     div {
@@ -28,7 +42,7 @@ form {
             width: 100%;
             background: #80808045;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         label {
@@ -59,15 +73,20 @@ form {
     
     }
 
+    div:nth-child(4)::after {
+        margin-bottom: 53px;
+    }
+
     .btn-submit {
-        padding: 10px 30px;
+        padding: 15px 30px;
         width: 100%;
         border-radius: 5px;
-        border: 1px solid rgba(128, 128, 128, 0.2705882353);
+        border: 1px solid #80808067;
+        background: white;
         cursor: pointer;
-        margin-top: 5px;
         font-weight: bold;
-        color: $thirdColor;
+        color: #80808067;
+        margin-bottom: 60px;
     
         &:hover {
             transition: 1s;

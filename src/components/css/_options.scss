@@ -4,8 +4,13 @@
     background: $secondaryColor;
     margin-top: 10px;
     margin-bottom: 100px;
-    width: 65%;
+    width: 70%;
     height: 270px;
+    padding: 40px 60px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .field-position-option {
         width: 100%;
@@ -60,7 +65,7 @@
                 width: 40%;
 
                 p {
-                    color: rgba(255, 255, 255, 0.529);
+                    color: #ffffff87;
                     text-align: end;
                     margin-bottom: 25px;
                 }
@@ -90,7 +95,7 @@
             }
 
             p {
-                color: rgba(255, 255, 255, 0.529);
+                color: #ffffff87;
                 margin-bottom: 25px;
             }
         }

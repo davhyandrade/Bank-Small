@@ -1,0 +1,42 @@
+@import 'colors';
+
+.menu-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+
+    .position-menu-user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+
+        a {
+            font-weight: bold;
+            font-variant: small-caps;
+            color: $thirdColor;
+            text-decoration: none;
+        }
+
+        div {
+            display: flex;
+
+            p:nth-child(1) {
+                margin-right: 30px;
+            }
+
+            p {
+                letter-spacing: 1px;
+
+                span {
+                    font-weight: bold;
+                    color: $thirdColor;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

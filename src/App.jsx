@@ -12,16 +12,16 @@ export default () => {
     const [password, setPassword] = useState('');
     const [formPreenchido, setFormPreenchido] = useState(false);
     const [isUsuario, setIsUsuario] = useState(false);
-    
-    return(
+
+    return (
         <>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={
                         formPreenchido ? (
                             <Navigate replace to="/home" />
-                        ) : (  
-                            <Form 
+                        ) : (
+                            <Form
                                 setUsuario={setUsuario}
                                 setPassword={setPassword}
                                 setFormPreenchido={setFormPreenchido}
@@ -35,15 +35,18 @@ export default () => {
                         isUsuario ? (
                             <Navigate replace to="/user" />
                         ) : (
-                            <LoginUser 
+                            <LoginUser
                                 usuario={usuario}
-                                password={password} 
+                                password={password}
                                 setIsUsuario={setIsUsuario}
                             />
                         )
                     } />
                     <Route path="/user" element={
-                        <User />
+                        <User
+                            usuario={usuario}
+                            password={password}
+                        />
                     } />
                     <Route path="/registration-user" element={
                         <RegistrationUser />

@@ -5,32 +5,33 @@ export default (props) => {
     const inputUsuario = useRef();
     const inputPassword = useRef();
 
-    function formUsuario(event) { 
+    function formUsuario(event) {
         event.preventDefault();
     }
 
     function verificar() {
-        if(inputUsuario.current.value == props.usuario && inputPassword.current.value == props.password) {
+        if (inputUsuario.current.value == props.usuario && inputPassword.current.value == props.password) {
             props.setIsUsuario(true);
         } else {
             alert('Senha ou Usuario incorreto')
         }
     }
-    
-    return(
+
+    return (
         <>
-            <div className="fields field-login" >
+            <div className="field-login" >
                 <form onSubmit={formUsuario}>
-                    <h1>Login</h1>
+                    <h1>Faça o seu Login</h1>
+                    <p>Entrar</p>
                     <div>
-                        <label htmlFor="usuario">Nome</label>
-                        <input ref={inputUsuario} className="input-text" id="usuario" type="text" placeholder="Digite o seu usuário" required maxLength='12'/>
+                        <label htmlFor="usuario">Usuário</label>
+                        <input ref={inputUsuario} className="input-text" id="usuario" type="text" placeholder="Digite o seu usuário" required maxLength='12' />
                     </div>
                     <div>
                         <label htmlFor="password">Senha</label>
-                        <input ref={inputPassword} className="input-text" id='password' type="password" placeholder="Digite a sua senha" required minLength='6' /> 
+                        <input ref={inputPassword} className="input-text" id='password' type="password" placeholder="Digite a sua senha" required minLength='6' />
                     </div>
-                    <input onClick={verificar} className="btn-submit" type="submit"/>
+                    <input onClick={verificar} className="btn-submit" type="submit" />
                 </form>
             </div>
         </>
