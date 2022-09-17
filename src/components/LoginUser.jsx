@@ -1,4 +1,5 @@
-import { useRef } from "react";
+import React, { useRef, useState } from "react";
+import Loading from "./Loading";
 import './css/style.css';
 
 export default (props) => {
@@ -11,7 +12,11 @@ export default (props) => {
 
     function verificar() {
         if (inputUsuario.current.value == props.usuario && inputPassword.current.value == props.password) {
-            props.setIsUsuario(true);
+            props.setLoading(true);
+            setTimeout(() => {
+                props.setIsUsuario(true);
+                props.setLoading(false);
+            }, 1000)
         } else {
             alert('Senha ou Usuario incorreto')
         }
@@ -19,6 +24,7 @@ export default (props) => {
 
     return (
         <>
+            {props.loading && <Loading/>}
             <div className="field-login" >
                 <form onSubmit={formUsuario}>
                     <h1>Faça o seu Login</h1>

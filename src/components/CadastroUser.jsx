@@ -1,13 +1,19 @@
+import Loading from './Loading';
 import './css/style.css'
 
 export default (props) => {
     function formUsuario(event) {
         event.preventDefault();
-        props.setFormPreenchido(true);
+        props.setLoading(true);
+        setTimeout(() => {
+            props.setFormPreenchido(true);
+            props.setLoading(false);
+        }, 1000)
     }
 
     return (
         <>
+            {props.loading && <Loading/>}
             <div className="field-login" >
                 <form onSubmit={formUsuario}>
                     <h1>Conta pessoal</h1>

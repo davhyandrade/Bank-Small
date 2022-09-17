@@ -1,17 +1,18 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
-import Form from './components/Form'
-import Home from './components/Home'
-import LoginUser from './components/LoginUser'
-import User from './components/User'
-import './css/style.css'
+import CadastroUser from './components/CadastroUser';
+import Home from './components/Home';
+import LoginUser from './components/LoginUser';
+import User from './components/User';
 import RegistrationUser from "./components/RegistrationUser";
+import './css/style.css';
 
 export default () => {
     const [usuario, setUsuario] = useState('');
     const [password, setPassword] = useState('');
     const [formPreenchido, setFormPreenchido] = useState(false);
     const [isUsuario, setIsUsuario] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     return (
         <>
@@ -21,7 +22,9 @@ export default () => {
                         formPreenchido ? (
                             <Navigate replace to="/home" />
                         ) : (
-                            <Form
+                            <CadastroUser
+                                loading={isLoading}
+                                setLoading={setIsLoading}
                                 setUsuario={setUsuario}
                                 setPassword={setPassword}
                                 setFormPreenchido={setFormPreenchido}
@@ -36,6 +39,8 @@ export default () => {
                             <Navigate replace to="/user" />
                         ) : (
                             <LoginUser
+                                loading={isLoading}
+                                setLoading={setIsLoading}
                                 usuario={usuario}
                                 password={password}
                                 setIsUsuario={setIsUsuario}
@@ -49,7 +54,10 @@ export default () => {
                         />
                     } />
                     <Route path="/registration-user" element={
-                        <RegistrationUser />
+                        <RegistrationUser 
+                            loading={isLoading}
+                            setLoading={setIsLoading}
+                        />
                     } />
                 </Routes>
             </BrowserRouter>
