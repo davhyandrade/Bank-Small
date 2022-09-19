@@ -1,11 +1,12 @@
 .loading {
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.86);
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
+    z-index: 99;
 
     img {
         width: 7vw;

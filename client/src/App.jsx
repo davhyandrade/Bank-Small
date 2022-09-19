@@ -1,21 +1,29 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import CadastroUser from './components/CadastroUser';
-import Home from './components/Home';
+import Home from './pages/Home';
 import LoginUser from './components/LoginUser';
-import User from './components/User';
-import RegistrationUser from "./components/RegistrationUser";
-import './css/style.css';
+import User from './pages/User';
+import RegistrationUser from "./pages/RegistrationUser";
+import './components/css/style.css';
 
 export default () => {
-    const [usuario, setUsuario] = useState('');
-    const [password, setPassword] = useState('');
+    const [data, setData] = useState('');
+
+    const handleChangeData = (data) => {
+        setData((prevData) => ({
+            ...prevData,
+            [data.target.name]: data.target.value,
+        }))
+    } 
+
     const [formPreenchido, setFormPreenchido] = useState(false);
     const [isUsuario, setIsUsuario] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [isData, setIsData] = useState(false);
 
     return (
-        <>
+        <> 
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={
@@ -25,14 +33,18 @@ export default () => {
                             <CadastroUser
                                 loading={isLoading}
                                 setLoading={setIsLoading}
-                                setUsuario={setUsuario}
-                                setPassword={setPassword}
                                 setFormPreenchido={setFormPreenchido}
+                                handleChangeData={handleChangeData}
+                                data={data}
                             />
                         )
                     } />
                     <Route path="/home" element={
-                        <Home usuario={usuario} />
+                        <Home 
+                            data={data}
+                            isData={isData} 
+                            setFormPreenchido={setFormPreenchido}
+                        />
                     } />
                     <Route path="/login-user" element={
                         isUsuario ? (
@@ -41,23 +53,29 @@ export default () => {
                             <LoginUser
                                 loading={isLoading}
                                 setLoading={setIsLoading}
-                                usuario={usuario}
-                                password={password}
+                                data={data}
                                 setIsUsuario={setIsUsuario}
                             />
                         )
                     } />
                     <Route path="/user" element={
                         <User
-                            usuario={usuario}
-                            password={password}
+                            data={data}
                         />
                     } />
                     <Route path="/registration-user" element={
-                        <RegistrationUser 
-                            loading={isLoading}
-                            setLoading={setIsLoading}
-                        />
+                        formPreenchido ? (
+                            <Navigate replace to="/home" />
+                        ) : (
+                            <RegistrationUser 
+                                loading={isLoading}
+                                setLoading={setIsLoading}
+                                handleChangeData={handleChangeData}
+                                setFormPreenchido={setFormPreenchido}
+                                data={data}
+                                setIsData={setIsData}
+                            /> 
+                        )
                     } />
                 </Routes>
             </BrowserRouter>

@@ -3,6 +3,7 @@ import Loading from "./Loading";
 import './css/style.css';
 
 export default (props) => {
+    
     const inputUsuario = useRef();
     const inputPassword = useRef();
 
@@ -11,7 +12,7 @@ export default (props) => {
     }
 
     function verificar() {
-        if (inputUsuario.current.value == props.usuario && inputPassword.current.value == props.password) {
+        if (inputUsuario.current.value == props.data.usuario && inputPassword.current.value == props.data.senha) {
             props.setLoading(true);
             setTimeout(() => {
                 props.setIsUsuario(true);

@@ -1,0 +1,131 @@
+.field-login {
+  height: 570px;
+  width: 31%;
+  padding: 40px 60px;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+form {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+form h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #001a59;
+}
+form p {
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  color: rgba(128, 128, 128, 0.5019607843);
+}
+form div {
+  width: 100%;
+}
+form div::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: rgba(128, 128, 128, 0.2705882353);
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+form div label {
+  text-align: start;
+  width: 98%;
+  margin: 20px 0 10px 0;
+  color: #5e5e5e;
+  font-size: 14px;
+}
+form div input {
+  width: 100%;
+  outline-color: #001a59;
+}
+form div input::-moz-placeholder {
+  color: rgba(128, 128, 128, 0.314);
+  letter-spacing: 0.1px;
+}
+form div input:-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.314);
+  letter-spacing: 0.1px;
+}
+form div input::placeholder {
+  color: rgba(128, 128, 128, 0.314);
+  letter-spacing: 0.1px;
+}
+form div .input-text {
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+form div:nth-child(4)::after {
+  margin-bottom: 53px;
+}
+form .btn-submit {
+  padding: 15px 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.4039215686);
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgba(128, 128, 128, 0.4039215686);
+  margin-bottom: 60px;
+}
+form .btn-submit:hover {
+  transition: 1s;
+  background: #001a59;
+  color: white;
+  border: 1px solid white;
+}
+form .btn-submit:active {
+  transition: 0.1s;
+  background: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.86);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+}
+.loading img {
+  width: 7vw;
+  margin-bottom: 50px;
+}
+
+body {
+  background: #eee;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */
