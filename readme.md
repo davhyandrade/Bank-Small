@@ -8,7 +8,7 @@
 
 A Bank Small é uma empresa que usa a tecnologia e design para devolver às pessoas o controle sobre suas informações pessoais.
 
-Projeto ao qual simula um banco fictício ao qual é encarregado pela gestão de informações pessoais do usuario.
+Projeto ao qual simula um banco fictício que é encarregado pela gestão de informações pessoais do usuario.
 
 # Desenvolvimento
 
@@ -17,23 +17,21 @@ Desenvolvido com o intuito de aprender `React`, a princípio apenas para pratica
 # hooks
 
 * `useState` 
-  - O React useStateHook nos permite rastrear o estado em um componente de função.
+
+  - O React useState nos permite rastrear o estado em um componente de função.
   Inicializamos nosso estado chamando useState em nosso componente de função.
-
-useState aceita um estado inicial e retorna dois valores:
-
-O estado atual.
-Uma função que atualiza o estado.
-
 ```js
     import { useState } from "react";
+    
     const [color, setColor] = useState("");
 ```
 * `useRef` 
+
   - Ele pode ser usado para acessar diretamente um elemento DOM.
 
 ```js
     import { useRef  } from "react";
+    
     const inputElement = useRef();
 
     return (
@@ -41,6 +39,7 @@ Uma função que atualiza o estado.
     );
 ```
 * `useEffect` 
+
   - Eles permitem que você use o estado e outros recursos do React sem escrever uma classe.
 
 ```js
