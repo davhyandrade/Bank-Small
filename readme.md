@@ -8,7 +8,7 @@
 
 A Bank Small é uma empresa que usa a tecnologia e design para devolver às pessoas o controle sobre suas informações pessoais.
 
-Projeto ao qual simula um banco fictício que é encarregado pela gestão de informações pessoais do usuario.
+Projeto ao qual simula um banco fictício que é encarregado pela gestão de informações pessoais do usuario, com tela de login, cadastro, loading e página Home, com design minimalista com intuito apenas de aprendizado e prática.
 
 # Desenvolvimento
 
