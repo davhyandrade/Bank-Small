@@ -15,6 +15,7 @@ export default (props) => {
         if (inputUsuario.current.value == props.data.usuario && inputPassword.current.value == props.data.senha) {
             props.setLoading(true);
             setTimeout(() => {
+                props.setVerifyUser(true);
                 props.setIsUsuario(true);
                 props.setLoading(false);
             }, 1000)

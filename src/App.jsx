@@ -19,6 +19,7 @@ export default () => {
 
     const [formPreenchido, setFormPreenchido] = useState(false);
     const [isUsuario, setIsUsuario] = useState(false);
+    const [verifyUser, setVerifyUser] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [isData, setIsData] = useState(false);
 
@@ -51,6 +52,7 @@ export default () => {
                             <Navigate replace to="/user" />
                         ) : (
                             <LoginUser
+                                setVerifyUser={setVerifyUser}
                                 loading={isLoading}
                                 setLoading={setIsLoading}
                                 data={data}
@@ -59,9 +61,13 @@ export default () => {
                         )
                     } />
                     <Route path="/user" element={
-                        <User
-                            data={data}
-                        />
+                        verifyUser ? (
+                            <User
+                                data={data}
+                            />
+                        ) : (
+                            <Navigate replace to="/home" />
+                        )
                     } />
                     <Route path="/registration-user" element={
                         formPreenchido ? (
@@ -77,6 +83,9 @@ export default () => {
                             /> 
                         )
                     } />
+                    <Route path="*" element={
+                        <Navigate replace to="/home" />
+                    }/>
                 </Routes>
             </BrowserRouter>
         </>
