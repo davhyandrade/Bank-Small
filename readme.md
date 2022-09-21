@@ -51,9 +51,8 @@ Desenvolvido com o intuito de aprender `React`, a princípio apenas para pratica
 
 * react-router-dom
 
-
-https://user-images.githubusercontent.com/109045257/191387195-147fc9db-53f6-4c97-9746-7a3ce7bf0f07.mp4
-
-
 * axios
 
+##
+
+https://user-images.githubusercontent.com/109045257/191387195-147fc9db-53f6-4c97-9746-7a3ce7bf0f07.mp4
