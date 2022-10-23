@@ -2,7 +2,7 @@
 
 > Status: Concluded
 
-## Bank Small
+## Bank Small.
 
 <img src="https://i.postimg.cc/prgzH5Yy/bank-small.png" alt="bank-small" width="100%">
 
