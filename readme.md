@@ -2,13 +2,13 @@
 
 > Status: Concluded
 
-## Bank Small.
+## Bank Small
 
 <img src="https://i.postimg.cc/prgzH5Yy/bank-small.png" alt="bank-small" width="100%">
 
 A Bank Small é uma empresa que usa a tecnologia e design para devolver às pessoas o controle sobre suas informações pessoais.
 
-Projeto ao qual simula um banco fictício que é encarregado pela gestão de informações pessoais do usuario, com tela de login, cadastro, loading e página Home, com design minimalista com intuito apenas de aprendizado e prática.
+Projeto ao qual simula um banco fictício que é encarregado pela gestão de informações pessoais do usuario, com tela de login, cadastro, loading e página Home, com design minimalista com intuito apenas de aprendizado e prática, com a introdução ao React JS.
 
 # Desenvolvimento
 
